@@ -1,3 +1,8 @@
+var grc = ee.ImageCollection("NOAA/DMSP-OLS/CALIBRATED_LIGHTS_V4"),
+    geometry = /* color: #d63000 */ee.Geometry.MultiPoint(),
+    polygon2 = ee.FeatureCollection("users/qmzheng09/fishnet4"),
+    polygon1 = ee.FeatureCollection("users/qmzheng09/gee_poly2");
+
 var subset=ee.FeatureCollection(polygon1);
 var DMSPgrc=ee.ImageCollection(grc);
 
